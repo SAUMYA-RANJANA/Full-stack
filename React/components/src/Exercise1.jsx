@@ -7,7 +7,7 @@ function Exercise(){
         <li>som</li>
         <li>hari</li>
        </ul>
-       <button onclick="callfun()">click</button>
+       <button onClick={callfun}>click</button>
      </div>
 }
 export default Exercise;

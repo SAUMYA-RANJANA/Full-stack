@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feedback Form</title>
+
+    <style>
+      body {
+        background-image: url("melo.png");
+        font-family: Arial, sans-serif;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      }
+      .box {
+        width: 500px;
+        height: 350px;
+        margin: 80px auto;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 25px;
+        border-radius: 8px;
+      }
+      h2 {
+        text-align: center;
+        color: aliceblue;
+      }
+      input,
+      textarea,
+      button {
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        box-sizing: border-box;
+        resize: none;
+        background: rgba(0, 0, 0, 0.5);
+        color: aliceblue;
+        text-transform: lowercase;
+      }
+
+      button {
+        background: green;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      .successmsg {
+        display: none;
+        color: rgb(19, 210, 48);
+        text-align: center;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <h2>Melo Feedback Form</h2>
+      <form
+        class="melo"
+        action="https://docs.google.com/forms/d/e/1FAIpQLSc3faifiX0dAEnyfCe3pUTANd3DupTu7LQja2gx0sPLv4udIw/formResponse"
+        target="hidden_iframe"
+        onsubmit="return submitted();"
+      >
+        <input type="text" name="entry.830552448" placeholder="Name" required />
+        <input
+          type="email"
+          name="entry.266268624"
+          placeholder="Email"
+          pattern="^(?![A-Z])(?!\.)(?!.*\.\.)[a-z0-9]+([._][a-z0-9]+)*@(?=[a-z0-9]*[a-z])[a-z0-9]+(\.[a-z]{2,})+$"
+          required
+        />
+        <textarea
+          name="entry.223001938"
+          placeholder="Feedback"
+          required
+        ></textarea>
+        <button type="submit">Submit</button>
+      </form>
+      <div class="successmsg" id="msg">sucess</div>
+      <iframe name="hidden_iframe" style="display: none"></iframe>
+    </div>
+    <script>
+      function submitted() {
+        const msg = document.getElementById("msg");
+        const form = document.querySelector("form");
+
+        msg.style.display = "block";
+
+        setTimeout(() => {
+          form.reset();
+          msg.style.display = "none";
+        }, 3000);
+
+        return true;
+      }
+    </script>
+  </body>
+</html>
