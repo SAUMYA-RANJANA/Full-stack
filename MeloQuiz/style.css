@@ -190,11 +190,11 @@ h1 {
   font-size: 1.3rem;
   font-weight: bold;
   margin-top: 20px;
-  color: #000; /* 🔹 black color for your score */
+  color: #000; 
 }
 #quizScreen {
-  background-color: #fff; /* white background */
-  color: #000; /* default text black inside card */
+  background-color: #fff; 
+  color: #000; 
   padding: 30px 40px;
   border-radius: 15px;
   width: 100%;
