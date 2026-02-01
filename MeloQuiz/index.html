@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Melo Online Quiz System</h1>
+
+
+<div id="instructions">
+  <h2>Quiz Instructions</h2>
+  <ul>
+    <li>Each question has 10 seconds.</li>
+    <li>Select only one option.</li>
+    <li>Instant feedback will be shown.</li>
+    <li>No negative marking.</li>
+    <li>Best score is saved.</li>
+    <li>Restart available after quiz ends.</li>
+  </ul>
+</div>
+<div id="startScreen">
+  <button id="startBtn">Start Quiz</button>
+</div>
+<div id="quizScreen" style="display:none;">
+  <h2 id="timer">time:10</h2>
+  <h2 id="question"></h2>
+  <div id="options"></div>
+ 
+
+</div>
+
+  
+  
+   <h3 id="result"></h3>
+<button id="restartBtn" style="display:none;">Restart Quiz</button>
+<h3 id="bestScore"></h3>
+
+
+<script src="script.js"></script>
+</body>
+</html>
